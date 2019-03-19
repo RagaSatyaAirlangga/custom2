@@ -5,12 +5,12 @@
 	<meta name="description" content="Your description goes here">
 	<meta name="keywords" content="your,keywords,goes,here">
 	<meta name="author" content="Your Name">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/login_polihe_files/dikti.css" media="screen,projection">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/login_polihe_files/style_menu.css" media="screen,projection">	
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/login_polihe_files/scroller.css" media="screen,projection">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url ('assets/login_polihe_files/dikti.css" media="screen,projection') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url ('assets/login_polihe_files/style_menu.css" media="screen,projection ') ?>">	
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url ('assets/login_polihe_files/scroller.css" media="screen,projection')	?>">
 	<title>Politeknik Negeri Jember</title>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/login_polihe_files/ajax.js.download"></script>	
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/login_polihe_files/scroller.js.download"></script>	
+<script type="text/javascript" src="<?php echo base_url('assets/login_polihe_files/ajax.js.download') ?>"></script>	
+<script type="text/javascript" src="<?php echo base_url('assets/login_polihe_files/scroller.js.download') ?>"></script>	
 <script language="JavaScript">
 	
 	function awal(){
