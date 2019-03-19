@@ -1,0 +1,87 @@
+var xmlHttp
+var xmlHttp1
+
+function trimSpaces(s){
+var res;
+var i;
+res = "";
+for (i = 0; i < s.length; i++){
+if ((s.charAt(i) != " ") && (s.charAt(i) != "-"))
+res += s.charAt(i);
+}
+return res;
+}
+
+
+function masuk()
+{
+if (trimSpaces(document.kirim.txtEmail.value)=="")
+   {
+		alert ("NIM belum diisi");
+		document.kirim.txtEmail.focus();
+		return;
+	}
+if (trimSpaces(document.kirim.txtPassword.value)=="")
+   {
+		alert ("Password belum diisi");
+		document.kirim.txtPassword.focus();
+		return;
+	}		
+	
+xmlHttp=GetXmlHttpObject();
+var params = "user="+ document.kirim.txtEmail.value +"&passwd="+ document.kirim.txtPassword.value+"&random="+ Math.random();
+xmlHttp.open("POST", "client.php", true);
+//Send the proper header information along with the request
+xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xmlHttp.setRequestHeader("Content-length", params.length);
+xmlHttp.setRequestHeader("Connection", "close");
+xmlHttp.onreadystatechange = stateChanged; 
+xmlHttp.send(params);
+} 
+
+
+function stateChanged() 
+{ 
+if (xmlHttp.readyState==4){ 
+  document.getElementById("mengunduh").innerHTML=""; 
+  var balas;
+  balas=xmlHttp.responseText;
+  //alert(balas);
+  if (balas.search("salah")==0)
+  //if (balas=="salah")
+	    alert("NIM atau password anda salah");     	
+  else
+     {
+     document.kirim.data.value=trimSpaces(xmlHttp.responseText);
+     document.kirim.submit();
+     }
+  }
+else
+	document.getElementById("mengunduh").innerHTML="<img src='image/ajax-loader.gif'>";
+}
+
+
+
+function GetXmlHttpObject()
+{
+var xmlHttp=null;
+try
+  {
+  // Firefox, Opera 8.0+, Safari
+  xmlHttp=new XMLHttpRequest();
+  }
+catch (e)
+  {
+  // Internet Explorer
+  try
+    {
+    xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+    }
+  catch (e)
+    {
+    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+  }
+return xmlHttp;
+}
+
