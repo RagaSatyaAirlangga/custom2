@@ -22,4 +22,12 @@ class Login extends CI_Controller {
 	{
 		$this->load->view('login');
 	}
+	public function getlogin()
+	{
+		$u = $this->input->post('username');
+		$p = $this->input->post('password');
+		$this->load->model('model_login');
+		$this->model_login->getlogin($u,$p);
+	}
+
 }

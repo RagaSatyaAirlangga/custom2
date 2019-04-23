@@ -17,7 +17,24 @@
 		if(document.getElementById('txtEmail')){
 			document.kirim.txtEmail.focus();
 		}
-	}		
+		function cekform()
+			{
+				if(!$("#username").val())
+				{
+					alert('maaf Username tidak boleh kosong');
+					$("#username").focus();
+					return false;
+				}
+
+				if(!$("#password").val())
+				{
+					alert('maaf password tidak boleh kosong');
+					$("#password").focus();
+					return false;
+				}
+			}
+	}
+
 </script>
 
 </head>
@@ -42,7 +59,7 @@
 		</div>
 		
 		<div class="splitcontentright">
-										<form id="kirim" name="kirim" method="post" action="https://sim-online.polije.ac.id/">
+										<form method="POST" action="<?php echo base_url(); ?>index.php/login/getlogin" onsubmit="return cekform();">
 							<br><br>
 							<table width="500" border="0" cellspacing="0" class="formlogin">
 							  <tbody><tr>
