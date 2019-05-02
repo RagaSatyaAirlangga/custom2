@@ -14,7 +14,8 @@ class Model_login extends CI_model {
 
 			{
 				$sess = array('username'		=> $row->username,
-						  	 	'password'	=> $row->password);
+						  	 	'nama_lengkap'	=> $row->nama_lengkap,
+						  	 	'foto'			=> $row->foto	);
 				$this->session->set_userdata($sess);
 				redirect('home');
 			}
