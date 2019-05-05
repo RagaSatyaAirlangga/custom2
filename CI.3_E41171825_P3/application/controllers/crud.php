@@ -57,5 +57,4 @@ class Crud extends CI_Controller{
 		$this->m_data->update_data($where,$data,'user');
 		redirect('crud/index');
 	}
- 
 }
