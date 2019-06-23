@@ -1,0 +1,3 @@
+Model : berisi tentang Database mysql,fungsi,insert,update dan laiin lain
+view : berisi tentang html css javascrip, atau template
+control : menapilkan / instruksi
