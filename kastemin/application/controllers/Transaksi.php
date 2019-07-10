@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             $data['sessionemail'] = $this->sess['email'];
 
-            $data['sessionfoto'] = $this->sess['foto'];
+            
             
             $kode = $this->input->post('kode_transaksi');
 
