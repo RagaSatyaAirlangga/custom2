@@ -69,11 +69,11 @@ include "header.php";
 									
 									<tr>
 										<td>Jenis Kain</td>
-										<td><select name="jenis_kain" name="jenis_kain" class="form-control">
+										<td><select name="jenis_kain" name="jenis_kain" class="form-control" required>
 												<option> </option>
-												<option>Bagus</option>
-												<option>Biasa</option>
-												<option>Jelek</option></td>
+												<option>Cotton Combad 30s</option>
+												<option>Drifit Ori</option>
+												<option>Drifit Benzama</option></td>
 										<td></td>
 									</tr>
 

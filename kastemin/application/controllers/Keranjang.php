@@ -53,10 +53,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               $harga = "70000";
               $berat = "0.2"*$_POST['jumlah'];
             }else if ($_POST['jenis_kain'] == "Biasa") {
-              $harga = "50000";
-              $berat = "0.3"*$_POST['jumlah'];
+              $harga = "150000";
+              $berat = "0.2"*$_POST['jumlah'];
             }else{
-              $harga = "25000";
+              $harga = "150000";
               $berat = "0.2"*$_POST['jumlah'];
             }          
             
