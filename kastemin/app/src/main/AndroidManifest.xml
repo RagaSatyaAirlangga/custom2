@@ -29,6 +29,9 @@
         <activity
             android:name=".PesanBarangActivity"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".PesananSayaActivity" />
+        <activity android:name=".PengaturanAkunActivity" />
+        <activity android:name=".Cart"></activity>
     </application>
 
 </manifest>

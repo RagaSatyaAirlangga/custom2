@@ -52,24 +52,58 @@ public class DaftarActivity extends AppCompatActivity {
         btInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Call<PostPutDelDaftar> postDaftarCall = mApiInterface.postDaftar(namadpn.getText().toString(),
-                        namablkng.getText().toString(),email.getText().toString(),pass.getText().toString(),
-                        jk.getText().toString(),no_hp.getText().toString(),province.getText().toString(),
-                        city.getText().toString(),kode_pos.getText().toString(),alamat.getText().toString());
-                postDaftarCall.enqueue(new Callback<PostPutDelDaftar>() {
-                    @Override
-                    public void onResponse(Call<PostPutDelDaftar> call, Response<PostPutDelDaftar> response) {
+                if (namadpn.getText().toString().length() == 0) {
+                    //jika form Email belum di isi / masih kosong
+                    namadpn.setError("Nama Depan diperlukan!");
+                } else if (namablkng.getText().toString().length() == 0) {
+                    //jika form Username belum di isi / masih kosong
+                    namablkng.setError("Nama Belakang diperlukan!");
+                } else if (email.getText().toString().length() == 0) {
+                    //jika form Passwrod belum di isi / masih kosong
+                    email.setError("Email diperlukan!");
+                } else if (pass.getText().toString().length() == 0) {
+                    //jika form Passwrod belum di isi / masih kosong
+                    pass.setError("Password diperlukan!");
+                } else if (jk.getText().toString().length() == 0) {
+                    //jika form Username belum di isi / masih kosong
+                    jk.setError("Jenis Kelamin diperlukan!");
+                } else if (no_hp.getText().toString().length() == 0) {
+                    //jika form Passwrod belum di isi / masih kosong
+                    no_hp.setError("Nomer Hp diperlukan!");
+                } else if (city.getText().toString().length() == 0) {
+                    //jika form Username belum di isi / masih kosong
+                    city.setError("Kota diperlukan!");
+                } else if (kode_pos.getText().toString().length() == 0) {
+                    //jika form Passwrod belum di isi / masih kosong
+                    kode_pos.setError("Kode Pos diperlukan!");
+                } else if (alamat.getText().toString().length() == 0) {
+                    //jika form Passwrod belum di isi / masih kosong
+                    alamat.setError("Alamat diperlukan!");
+                } else if (province.getText().toString().length() == 0) {
+                    //jika form Passwrod belum di isi / masih kosong
+                    province.setError("provinsi diperlukan!");
+                } else {
 
-                        Toast.makeText(getApplicationContext(), "Berhasil", Toast.LENGTH_LONG).show();
-                        // Notifi.ma.refresh();
-                        //finish();
-                    }
 
-                    @Override
-                    public void onFailure(Call<PostPutDelDaftar> call, Throwable t) {
-                        Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
-                    }
-                });
+                    Call<PostPutDelDaftar> postDaftarCall = mApiInterface.postDaftar(namadpn.getText().toString(),
+                            namablkng.getText().toString(), email.getText().toString(), pass.getText().toString(),
+                            jk.getText().toString(), no_hp.getText().toString(), province.getText().toString(),
+                            city.getText().toString(), kode_pos.getText().toString(), alamat.getText().toString());
+                    postDaftarCall.enqueue(new Callback<PostPutDelDaftar>() {
+                        @Override
+                        public void onResponse(Call<PostPutDelDaftar> call, Response<PostPutDelDaftar> response) {
+
+                            Toast.makeText(getApplicationContext(), "Berhasil", Toast.LENGTH_LONG).show();
+                            // Notifi.ma.refresh();
+                            //finish();
+                        }
+
+                        @Override
+                        public void onFailure(Call<PostPutDelDaftar> call, Throwable t) {
+                            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
             }
         });
 

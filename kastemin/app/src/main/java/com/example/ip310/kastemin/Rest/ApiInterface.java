@@ -5,8 +5,10 @@ package com.example.ip310.kastemin.Rest;
  */
 
 import com.example.ip310.kastemin.Model.GetDaftar;
+import com.example.ip310.kastemin.Model.GetHistori;
 import com.example.ip310.kastemin.Model.Getdetail_barang;
 import com.example.ip310.kastemin.Model.PostPutDelDaftar;
+import com.example.ip310.kastemin.Model.PostPutDelHistori;
 import com.example.ip310.kastemin.Model.PostPutDelLogin;
 import com.example.ip310.kastemin.Model.PostPutDelPesan;
 
@@ -21,6 +23,8 @@ import retrofit2.http.PUT;
 public interface ApiInterface {
     @GET("R_user")
     Call<GetDaftar> getDaftar();
+    @GET("Pesan_brng")
+    Call<GetHistori> getCart();
     @FormUrlEncoded
     @POST("R_user")
     Call<PostPutDelDaftar> postDaftar(@Field("namadpn") String namadpn,
@@ -56,8 +60,15 @@ public interface ApiInterface {
     Call<PostPutDelPesan> postPesan (@Field("jenis_kain") String namadpn,
                                      @Field("jumlah") String jumlah,
                                      @Field("ukuran") String ukuran,
-                                     @Field("file") String file,
+                                     @Field("foto") String foto,
                                      @Field("catatan") String catatan);
+    @FormUrlEncoded
+    @GET("Histori")
+    Call<PostPutDelHistori> postHistori (@Field("jenis_kain") String namadpn,
+                                        @Field("jumlah") String jumlah,
+                                        //@Field("ukuran") String ukuran,
+                                       //@Field("foto") String foto,
+                                       @Field("catatan") String catatan);
 
 
 }

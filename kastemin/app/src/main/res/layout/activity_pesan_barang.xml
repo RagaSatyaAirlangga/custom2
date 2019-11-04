@@ -26,8 +26,8 @@
         android:layout_width="match_parent"
         android:layout_below="@+id/tool"
         android:paddingTop="20dp"
-        android:layout_height="230dp"
-        android:src="@color/colorPrimaryDark"/>
+        android:layout_height="230dp"/>
+
 
     <TextView
         android:paddingTop="20dp"
@@ -35,6 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Jenis Kain: "
+        android:paddingLeft="30dp"
         android:layout_below="@id/tvGambar"
         android:textSize="20sp"/>
     <TextView
@@ -42,6 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Jumlah Baju : "
+        android:paddingLeft="30dp"
         android:layout_below="@id/tvJkain"
         android:textSize="20sp"/>
     <TextView
@@ -49,21 +51,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ukuran : "
+        android:paddingLeft="30dp"
         android:layout_below="@id/tvJmlhBj"
         android:textSize="20sp"/>
-    <TextView
+    <!--<TextView
         android:id="@+id/tvUploud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Uploud Baju: "
         android:layout_below="@id/tvUkuran"
-        android:textSize="20sp"/>
+        android:textSize="20sp"/>-->
     <TextView
         android:id="@+id/tvCatatan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Catatan: "
-        android:layout_below="@id/tvUploud"
+        android:paddingLeft="30dp"
+        android:layout_below="@id/tvUkuran"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvgmbr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gambar"
+        android:paddingLeft="30dp"
+        android:layout_below="@id/tvCatatan"
         android:textSize="20sp"/>
     <EditText
         android:id="@+id/Jkain"
@@ -86,13 +98,13 @@
         android:hint=""
         android:layout_toRightOf="@+id/tvUkuran"
         android:layout_alignBaseline="@+id/tvUkuran"/>
-    <EditText
+    <!--<EditText
         android:id="@+id/Uploud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint=""
         android:layout_toRightOf="@+id/tvUploud"
-        android:layout_alignBaseline="@+id/tvUploud"/>
+        android:layout_alignBaseline="@+id/tvUploud"/>-->
     <EditText
         android:id="@+id/Catatan"
         android:layout_width="wrap_content"
@@ -104,16 +116,27 @@
         android:id="@+id/Linearlayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_below="@+id/tvCatatan"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp">
+        <Button
+            android:id="@+id/btpilih"
+            android:layout_marginTop="40dp"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:text="Pilih Gambar"
+            android:background="@drawable/button_backgroud"
+            android:textColor="@color/colorPutih"/>
     <Button
         android:id="@+id/btPesan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pesan"/>
+        android:layout_marginTop="5dp"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:text="Pesan"
+        android:background="@drawable/button_backgroud"
+        android:textColor="@color/colorPutih"/>
     </LinearLayout>
 
 

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorPutih"
     tools:context=".login">
     <!--<TextView
         android:id="@+id/m_email"
@@ -68,14 +69,14 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@drawable/icon"/>
+            android:layout_height="180dp"
+            android:src="@drawable/user"/>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColorHint="@color/colorPrimaryDark"
-        android:paddingTop="15dp">
+        android:layout_marginTop="25dp" >
         <EditText
             android:id="@+id/l_email"
             android:hint="email"

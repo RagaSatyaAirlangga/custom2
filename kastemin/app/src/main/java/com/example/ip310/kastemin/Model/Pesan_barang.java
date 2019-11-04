@@ -9,16 +9,16 @@ public class Pesan_barang {
     private String jumlah;
     @SerializedName("ukuran")
     private String ukuran;
-    @SerializedName("file")
-    private String file;
+    @SerializedName("foto")
+    private String foto;
     @SerializedName("catatan")
     private String catatan;
 
-    public Pesan_barang(String jenis_kain, String jumlah, String ukuran, String file, String catatan) {
+    public Pesan_barang(String jenis_kain, String jumlah, String ukuran, String catatan) {
         this.jenis_kain = jenis_kain;
         this.jumlah = jumlah;
         this.ukuran = ukuran;
-        this.file = file;
+        this.foto = foto;
         this.catatan = catatan;
 
     }
@@ -48,11 +48,11 @@ public class Pesan_barang {
     }
 
     public String getFile() {
-        return file;
+        return foto;
     }
 
-    public void setFile(String file) {
-        this.file = file;
+    public void setFile(String foto) {
+        this.foto = foto;
     }
 
     public String getCatatan() {

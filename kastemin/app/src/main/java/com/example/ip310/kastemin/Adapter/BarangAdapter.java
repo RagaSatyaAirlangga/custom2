@@ -40,7 +40,7 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.MyViewHold
     public void onBindViewHolder (MyViewHolder holder,final int position){
         holder.mTextViewNama.setText("Nama = " + mBarangList.get(position).getNama());
         holder.mTextViewdeskripsi.setText("Deskripsi = " + mBarangList.get(position).getDeskripsi());
-        final String urlFoto = "http://192.168.1.6/kastemin/foto/" + mBarangList.get(position).getFoto();
+        final String urlFoto = "http://192.168.43.70/kastemin2/foto/" + mBarangList.get(position).getFoto();
         Picasso.with(context).load(urlFoto).into(holder.mViewFoto);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
